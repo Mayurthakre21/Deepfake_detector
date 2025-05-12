@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Deepfake Detector</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body { font-family: Arial, sans-serif; width: 250px; padding: 10px; }
+        h2 { font-size: 16px; text-align: center; }
+        button { width: 100%; padding: 10px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+
+        /* Floating Sidebar Styles */
+        .floating-sidebar {
+            position: fixed;
+            top: 50px;
+            right: 10px;
+            width: 300px;
+            height: auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.2);
+            padding: 15px;
+            z-index: 10000;
+            display: none;
+        }
+        
+        #close-sidebar {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            border: none;
+            background: red;
+            color: white;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Deepfake Detector</h2>
+    <button id="scan-btn">Scan Page</button>
+    <button id="deepfake-btn">D</button>
+
+    <!-- Floating Sidebar -->
+    <div id="deepfake-sidebar" class="floating-sidebar">
+        <button id="close-sidebar">X</button>
+        <h2>Deepfake Scan Results</h2>
+        <ul id="deepfake-results"></ul>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
